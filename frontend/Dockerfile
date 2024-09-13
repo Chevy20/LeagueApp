@@ -1,5 +1,5 @@
 # Build Stage
-FROM node:14 AS build
+FROM node:20.17.0 AS build
 
 # Set the working directory inside the container
 WORKDIR /app
