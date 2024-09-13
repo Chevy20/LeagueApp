@@ -1,0 +1,16 @@
+version: '3'
+services:
+  backend:
+    image: your-dockerhub-username/leagueapp-backend:latest
+    ports:
+      - '5000:5000'
+    environment:
+      - MONGO_URI=${MONGO_URI}
+      - RIOT_API_KEY=${RIOT_API_KEY}
+    restart: always
+
+  frontend:
+    image: your-dockerhub-username/leagueapp-frontend:latest
+    ports:
+      - '80:80'
+    restart: always
