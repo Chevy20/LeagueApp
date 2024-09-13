@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const dotenv = require('dotenv');
+const dotenv = require('dotenv').config({ path: '../.env' });
 const mongoose = require('mongoose');
 const cors = require('cors');
 
