@@ -1,10 +1,10 @@
 const express = require('express');
 const app = express();
-const dotenv = require('dotenv').config({ path: '../.env' });
+const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 const cors = require('cors');
 
-dotenv.config();
+dotenv.config({ path: '../.env' });
 
 // Middleware
 app.use(express.json());
