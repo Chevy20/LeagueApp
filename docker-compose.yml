@@ -1,7 +1,7 @@
 version: '3'
 services:
   backend:
-    image: your-dockerhub-username/leagueapp-backend:latest
+    image: mattchevy/leagueapp-backend:latest
     ports:
       - '5000:5000'
     environment:
@@ -10,7 +10,7 @@ services:
     restart: always
 
   frontend:
-    image: your-dockerhub-username/leagueapp-frontend:latest
+    image: mattchevy/leagueapp-frontend:latest
     ports:
       - '80:80'
     restart: always
