@@ -60,7 +60,6 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: ./backend
-          file: ./backend/Dockerfile.backend
           push: true
           tags: mattchevy/leagueapp-backend:latest
 
@@ -68,7 +67,6 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: ./frontend
-          file: ./frontend/Dockerfile.frontend
           push: true
           tags: mattchevy/leagueapp-frontend:latest
 
