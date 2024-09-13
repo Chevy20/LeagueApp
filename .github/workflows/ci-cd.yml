@@ -77,11 +77,16 @@ jobs:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_SSH_KEY }}
-          port: ${{ secrets.EC2_PORT }}
           script: |
-            cd /home/ubuntu/LeagueApp
-            git pull origin main
-            export MONGO_URI=${{ secrets.MONGO_URI }}
-            export RIOT_API_KEY=${{ secrets.RIOT_API_KEY }}
-            docker-compose pull
-            docker-compose up -d
+                cd /home/ubuntu/LeagueApp
+                git pull origin main
+          
+                # Overwrite the .env file with the new values
+                echo "PORT=5000" > .env
+                echo "MONGO_URI=$mongo" > .env
+                echo "RIOT_API_KEY=$riot" > .env
+          
+                # Pull updated images and restart containers
+                docker compose pull
+                docker compose up -dose up -d
+
