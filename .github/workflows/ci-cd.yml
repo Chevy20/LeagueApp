@@ -79,7 +79,7 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             # Test SSH connection
-            ls /home/ubuntu
+            ssh -o StrictHostKeyChecking=no -o ConnectTimeout=30 ${{ secrets.EC2_USERNAME }}@${{ secrets.EC2_HOST }} ls /home/ubuntu
 
             # Change to the application directory
             cd /home/ubuntu/LeagueApp
@@ -94,4 +94,3 @@ jobs:
             # Pull updated images and restart containers
             docker compose pull
             docker compose up -d
-          options: '-o StrictHostKeyChecking=no -o ConnectTimeout=30'
