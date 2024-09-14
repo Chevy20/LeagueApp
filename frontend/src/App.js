@@ -1,11 +1,12 @@
 // frontend/src/App.js
 
 import React from 'react';
+import RiotIdForm from './components/RiotIdForm';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello World from the frontend! This is a test push for new key!</h1>
+      <RiotIdForm /> {/* Display the RiotIdForm form */}
     </div>
   );
 }
