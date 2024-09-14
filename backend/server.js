@@ -16,8 +16,7 @@ mongoose.connect(process.env.MONGO_URI)
     .catch(err => console.log(err));
 
 // Routes
-const helloRoute = require('./services/hello/route');
-app.use('/api/hello', helloRoute);
+
 
 // Start the server
 const PORT = process.env.PORT || 5000;
