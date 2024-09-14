@@ -11,6 +11,7 @@ const createRiotApiClient = (endpoint) => {
         baseURL,
         headers: {
             'X-Riot-Token': process.env.RIOT_API_KEY,
+            'Accept': 'application/json',
         },
     });
 };
