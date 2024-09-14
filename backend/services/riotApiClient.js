@@ -1,10 +1,19 @@
 const axios = require('axios');
+const BASE_URLS = require('../config/riotEndpoints');
 
-const riotApiClient = axios.create({
-    baseURL: 'https://na1.api.riotgames.com',
-    headers: {
-        'X-Riot-Token': process.env.RIOT_API_KEY
+const createRiotApiClient = (endpoint) => {
+    const baseURL = BASE_URLS[endpoint];
+    if (!baseURL) {
+        throw new Error('Base URL for endoint ${endpoint} not found');
     }
-});
 
-module.exports = riotApiClient;
+    return axios.create({
+        baseURL,
+        headers: {
+            'X-Riot-Token': process.env.RIOT_API_KEY,
+        },
+    });
+};
+
+
+module.exports = { createRiotApiClient };
