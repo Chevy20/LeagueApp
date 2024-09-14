@@ -1,4 +1,4 @@
-#CI/CD
+# CI/CD Pipeline
 name: CI/CD Pipeline
 
 on:
@@ -72,22 +72,26 @@ jobs:
           tags: mattchevy/leagueapp-frontend:latest
 
       - name: Deploy to EC2
-        uses: appleboy/ssh-action@v0.1.7
+        uses: appleboy/ssh-action@v0.1.8
         with:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-                cd /home/ubuntu/LeagueApp
-                git pull origin main
-          
-                # Overwrite the .env file with the new values
-                echo "PORT=5000" > .env
-                echo "MONGO_URI=${{ secrets.MONGO_URI }}" >> .env
-                echo "RIOT_API_KEY=${{ secrets.RIOT_API_KEY }}" >> .env
-          
-                # Pull updated images and restart containers
-                docker compose pull
-                docker compose up -d
+            # Test SSH connection
+            ls /home/ubuntu
 
-
+            # Change to the application directory
+            cd /home/ubuntu/LeagueApp
+            git pull origin main
+            
+            # Overwrite the .env file with the new values
+            echo "PORT=5000" > .env
+            echo "MONGO_URI=${{ secrets.MONGO_URI }}" >> .env
+            echo "RIOT_API_KEY=${{ secrets.RIOT_API_KEY }}" >> .env
+            chmod 600 .env
+            
+            # Pull updated images and restart containers
+            docker compose pull
+            docker compose up -d
+          options: '-o StrictHostKeyChecking=no -o ConnectTimeout=30'
