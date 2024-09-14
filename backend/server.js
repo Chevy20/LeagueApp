@@ -1,8 +1,13 @@
+//Importing the required modules
 const express = require('express');
 const app = express();
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 const cors = require('cors');
+
+// Import routes
+const accountRoutes = require('./routes/accountRoutes');
+
 
 dotenv.config({ path: '../.env' });
 
@@ -16,6 +21,8 @@ mongoose.connect(process.env.MONGO_URI)
     .catch(err => console.log(err));
 
 // Routes
+app.use('/api/accounts', accountRoutes);
+
 
 
 // Start the server
