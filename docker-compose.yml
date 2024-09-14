@@ -2,15 +2,34 @@ version: '3'
 services:
   backend:
     image: mattchevy/leagueapp-backend:latest
-    ports:
-      - '5000:5000'
+    expose:
+      - '5000'  # Exposing the internal port, not binding it to the host machine
     environment:
       - MONGO_URI=${MONGO_URI}
       - RIOT_API_KEY=${RIOT_API_KEY}
     restart: always
+    networks:
+      - leagueapp-network
 
   frontend:
     image: mattchevy/leagueapp-frontend:latest
-    ports:
-      - '80:80'
+    expose:
+      - '80'  # Exposing the internal port, not binding it to the host machine
     restart: always
+    networks:
+      - leagueapp-network
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - '80:80'  # Exposing Nginx on port 80 for HTTP
+      - '443:443'  # You can later add SSL with Certbot
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf  # Linking your Nginx configuration
+    restart: always
+    networks:
+      - leagueapp-network
+
+networks:
+  leagueapp-network:
+    driver: bridge
