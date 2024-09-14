@@ -48,24 +48,5 @@ exports.getAccountByRiotId = async (req, res) => {
     }
 };
 
-exports.getActivePlayerShard = async (req, res) => {
-    const { game, puuid } = req.params;
 
-    if (!game) {
-        return res.status(400).json({ message: 'game is required' });
-    }
-    if (!puuid) {
-        return res.status(400).json({ message: 'puuid is required' });
-    }
-
-    try {
-        // Create the Riot API client with the correct base URL for Account V1
-        const riotApiClient = createRiotApiClient('ACCOUNT_V1');
-
-        const response = await riotApiClient.get(`/active-shards/by-game/${game}/by-puuid/${puuid}`);
-    } catch (error) {
-        console.error('Error fetching data:', error);
-        res.status(500).json({ message: 'Failed to fetch account by RiotID' });
-    }
-};
 
