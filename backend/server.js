@@ -7,7 +7,6 @@ const cors = require('cors');
 
 // Import routes
 const accountRoutes = require('./routes/accountRoutes');
-
 const summonerRoutes = require('./routes/summonerRoutes');
 
 
