@@ -6,7 +6,7 @@ const LandingPage = () => {
         <div>
             <h1>Welcome to the Landing Page</h1>
             {/* Use NavButton to navigate to other pages */}
-            <NavButton label="Go to Riot ID Page" targetPage="/riot-id" />
+            <NavButton label="Go to Account API Test Page" targetPage="/account" />
             {/* Add more NavButtons as needed */}
         </div>
     );

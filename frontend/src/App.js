@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LandingPage from './pages/LandingPage';
-import RiotIdPage from './pages/RiotIdPage';  // Import other pages
+import AccountPage from './pages/Account';
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
         <Route path="/" element={<LandingPage />} />
 
         {/* Define other routes */}
-        <Route path="/riot-id" element={<RiotIdPage />} />
+        <Route path="/account" element={<AccountPage />} />
         {/* Add more routes as needed */}
       </Routes>
     </Router>
