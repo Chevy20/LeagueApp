@@ -27,6 +27,18 @@ app.use('/api/summoners', summonerRoutes)
 
 
 
+//test
+app.get('/api', (req, res) => {
+    res.json({ message: 'Welcome to the API' });
+});
+app.get('/api/accounts', (req, res) => {
+    res.json({ message: 'Welcome to the Accounts API' });
+});
+app.get('/api/summoners', (req, res) => {
+    res.json({ message: 'Welcome to the summoners API' });
+});
+
+
 // Start the server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
