@@ -1,18 +1,23 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import LandingPage from './pages/LandingPage';
+import HomePage from './pages/HomePage';
 import AccountPage from './pages/Account';
+import SummonerPage from './pages/Summoner';
+
 
 function App() {
   return (
     <Router>
       <Routes>
         {/* Default route to load LandingPage */}
-        <Route path="/" element={<LandingPage />} />
+        <Route path="/" element={<HomePage />} />
 
-        {/* Define other routes */}
+        {/* Default route to account testing API page*/}
         <Route path="/account" element={<AccountPage />} />
-        {/* Add more routes as needed */}
+
+        {/* Default route to summoner testing API page*/}
+        <Route path="/summoner" element={<SummonerPage />} />
+
       </Routes>
     </Router>
   );
