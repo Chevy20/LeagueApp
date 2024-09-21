@@ -8,6 +8,8 @@ const cors = require('cors');
 // Import routes
 const accountRoutes = require('./routes/accountRoutes');
 
+const summonerRoutes = require('./routes/summonerRoutes');
+
 
 dotenv.config({ path: '../.env' });
 
@@ -22,6 +24,7 @@ mongoose.connect(process.env.MONGO_URI)
 
 // Routes
 app.use('/api/accounts', accountRoutes);
+app.use('/api/summoners', summonerRoutes)
 
 
 
