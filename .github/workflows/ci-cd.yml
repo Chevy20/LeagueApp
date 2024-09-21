@@ -94,3 +94,6 @@ jobs:
             # Pull updated images and restart containers
             docker compose pull
             docker compose up -d
+
+            # Gracefully reload Nginx
+            docker exec leagueapp-nginx-1 nginx -s reload
