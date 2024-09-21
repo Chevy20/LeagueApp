@@ -27,7 +27,7 @@ function SummonerIDForm() {
             <h2>Find Summoner by Summoner ID</h2>
             <form onSubmit={handleSubmit}>
                 <label>
-                    Game Name:
+                    Summoner ID:
                     <input
                         type="text"
                         value={summonerID}
