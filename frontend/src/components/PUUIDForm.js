@@ -5,6 +5,7 @@ function PUUIDForm() {
     const options = [
         { label: 'Accounts', value: 'accounts' },
         { label: 'Summoners', value: 'summoners' },
+        { label: 'Spectator', value: 'spectator' }
     ];
 
     const [puuid, setPuuid] = useState('');
