@@ -8,6 +8,7 @@ const cors = require('cors');
 // Import routes
 const accountRoutes = require('./routes/accountRoutes');
 const summonerRoutes = require('./routes/summonerRoutes');
+const spectatorRoutes = require('./routes/spectatorRoutes');
 
 
 dotenv.config({ path: '../.env' });
@@ -24,6 +25,7 @@ mongoose.connect(process.env.MONGO_URI)
 // Routes
 app.use('/api/accounts', accountRoutes);
 app.use('/api/summoners', summonerRoutes)
+app.use('/api/spectator', spectatorRoutes)
 
 
 
@@ -36,6 +38,9 @@ app.get('/api/accounts', (req, res) => {
 });
 app.get('/api/summoners', (req, res) => {
     res.json({ message: 'Welcome to the summoners API' });
+});
+app.get('/api/spectator', (req, res) => {
+    res.json({ message: 'Welcome to the spectator API' });
 });
 
 
