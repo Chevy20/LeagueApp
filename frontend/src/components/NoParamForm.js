@@ -17,7 +17,7 @@ function NoParamForm() {
         try {
             const response = await fetch(`/api/${selectedOption}`);
             if (!response.ok) {
-                throw new Error('Failed to fetch requested data');
+                throw new Error('Failed to fetch requested data' + error);
             }
             const data = await response.json();
             setdata(data);

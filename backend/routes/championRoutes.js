@@ -3,7 +3,7 @@ const router = express.Router();
 const championController = require('../controllers/championController');
 
 //Route to get account by PUUID
-router.get('/champion-rotations', championController.getAccountByPuuid);
+router.get('/champion-rotations', championController.getChampionRotation);
 
 
 
