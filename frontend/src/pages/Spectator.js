@@ -1,7 +1,7 @@
 import React from 'react';
 import RiotIdForm from '../components/RiotIdForm';
 import PUUIDForm from '../components/PUUIDForm';
-import SpectatorFeaturedGamesForm from '../components/SpectatorFeaturedGamesForm';
+import NoParamForm from '../components/NoParamForm';
 
 const SpectatorPage = () => {
     return (
@@ -17,7 +17,7 @@ const SpectatorPage = () => {
                 <PUUIDForm />
             </div>
             <div>
-                <SpectatorFeaturedGamesForm />
+                <NoParamForm />
             </div>
         </div>
     );
