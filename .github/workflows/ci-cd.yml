@@ -87,7 +87,6 @@ jobs:
             
             # Overwrite the .env file with the new values
             echo "PORT=5000" > .env
-            echo "MONGO_URI=${{ secrets.MONGO_URI }}" >> .env
             echo "RIOT_API_KEY=${{ secrets.RIOT_API_KEY }}" >> .env
             chmod 600 .env
             
