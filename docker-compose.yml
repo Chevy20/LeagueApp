@@ -5,7 +5,6 @@ services:
     expose:
       - '5000'  # Exposing the internal port, not binding it to the host machine
     environment:
-      - MONGO_URI=${MONGO_URI}
       - RIOT_API_KEY=${RIOT_API_KEY}
     restart: always
     networks:
