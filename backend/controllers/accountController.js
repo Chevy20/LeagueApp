@@ -10,6 +10,7 @@ exports.getAccountByPuuid = async (req, res) => {
         return res.status(400).json({ message: 'Puuid is required' });
     }
 
+    //Try api call, error if not
     try {
         // Create the Riot API client with the correct base URL for Account V1
         const riotApiClient = createRiotApiClient('ACCOUNT_V1');
@@ -27,7 +28,7 @@ exports.getAccountByPuuid = async (req, res) => {
 exports.getAccountByRiotId = async (req, res) => {
     const { gameName, tagLine } = req.params;
 
-    // Check if PUUID is provided
+    // Check if Game name and tag line is provided
     if (!gameName) {
         return res.status(400).json({ message: 'gameName is required' });
     }
@@ -39,7 +40,7 @@ exports.getAccountByRiotId = async (req, res) => {
         // Create the Riot API client with the correct base URL for Account V1
         const riotApiClient = createRiotApiClient('ACCOUNT_V1');
 
-        // Fetch the account data by PUUID
+        // Fetch the account data by Riot ID
         const response = await riotApiClient.get(`/accounts/by-riot-id/${gameName}/${tagLine}`);
         res.status(200).json(response.data);
     } catch (error) {

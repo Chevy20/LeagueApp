@@ -1,16 +1,13 @@
 //extract createRiotApiClient from services/riotApiClient
 const { createRiotApiClient } = require('../services/riotApiClient');
 
-// Fetch account by PUUID
+// Fetch champ rotation
 exports.getChampionRotation = async (req, res) => {
-
-
-
     try {
-        // Create the Riot API client with the correct base URL for Account V1
+        // Create the Riot API client with the correct base URL for CHAMPION_V3
         const riotApiClient = createRiotApiClient('CHAMPION_V3');
 
-        // Fetch the account data by PUUID
+        // Fetch the champ rotation data
         const response = await riotApiClient.get(`/champion-rotations`);
         res.status(200).json(response.data);
     } catch (error) {

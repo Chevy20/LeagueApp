@@ -28,31 +28,31 @@ function App() {
         {/* Default route to summoner testing API page*/}
         <Route path="/summoner" element={<SummonerPage />} />
 
-        {/* Default route to summoner testing API page*/}
+        {/* Default route to champion testing API page*/}
         <Route path="/champion" element={<ChampionPage />} />
 
-        {/* Default route to summoner testing API page*/}
+        {/* Default route to league testing API page*/}
         <Route path="/league" element={<LeaguePage />} />
 
-        {/* Default route to summoner testing API page*/}
+        {/* Default route to league-exp testing API page*/}
         <Route path="/league-exp" element={<LeagueExpPage />} />
 
-        {/* Default route to summoner testing API page*/}
+        {/* Default route to clash testing API page*/}
         <Route path="/clash" element={<ClashPage />} />
 
-        {/* Default route to summoner testing API page*/}
+        {/* Default route to lol-status testing API page*/}
         <Route path="/lol-status" element={<LolStatusPage />} />
 
-        {/* Default route to summoner testing API page*/}
+        {/* Default route to match testing API page*/}
         <Route path="/match" element={<MatchPage />} />
 
-        {/* Default route to summoner testing API page*/}
+        {/* Default route to lol-challenges testing API page*/}
         <Route path="/lol-challenges" element={<LolChallengesPage />} />
 
-        {/* Default route to summoner testing API page*/}
+        {/* Default route to champion-mastery testing API page*/}
         <Route path="/champion-mastery" element={<ChampionMasteryPage />} />
 
-        {/* Default route to summoner testing API page*/}
+        {/* Default route to spectator testing API page*/}
         <Route path="/spectator" element={<SpectatorPage />} />
 
 
