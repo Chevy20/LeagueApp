@@ -11,6 +11,7 @@ const summonerRoutes = require('./routes/summonerRoutes');
 const spectatorRoutes = require('./routes/spectatorRoutes');
 const championRoutes = require('./routes/championRoutes');
 const statusRoutes = require('./routes/statusRoutes');
+const leagueRoutes = require('./routes/leagueRoutes');
 
 
 dotenv.config({ path: '../.env' });
@@ -23,11 +24,11 @@ app.use(cors());
 
 // Routes
 app.use('/api/accounts', accountRoutes);
-app.use('/api/summoners', summonerRoutes)
-app.use('/api/spectator', spectatorRoutes)
-app.use('/api/platform', championRoutes)
-app.use('/api/lol-status', statusRoutes)
-
+app.use('/api/summoners', summonerRoutes);
+app.use('/api/spectator', spectatorRoutes);
+app.use('/api/platform', championRoutes);
+app.use('/api/lol-status', statusRoutes);
+app.use('/api/league', leagueRoutes);
 
 
 //test
@@ -48,6 +49,9 @@ app.get('/api/platform', (req, res) => {
 });
 app.get('/api/lol-status', (req, res) => {
     res.json({ message: 'Welcome to the lol status API' });
+});
+app.get('/api/league', (req, res) => {
+    res.json({ message: 'Welcome to the league API' });
 });
 
 // Start the server
