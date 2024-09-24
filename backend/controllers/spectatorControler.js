@@ -1,7 +1,7 @@
 //extract createRiotApiClient from services/riotApiClient
 const { createRiotApiClient } = require('../services/riotApiClient');
 
-// Fetch account by PUUID
+// Fetch active games by PUUID
 exports.getActiveGamesByPUUID = async (req, res) => {
     const { puuid } = req.params;
 
@@ -11,10 +11,10 @@ exports.getActiveGamesByPUUID = async (req, res) => {
     }
 
     try {
-        // Create the Riot API client with the correct base URL for Account V1
+        // Create the Riot API client with the correct base URL for SPECTATOR_V5
         const riotApiClient = createRiotApiClient('SPECTATOR_V5');
 
-        // Fetch the account data by PUUID
+        // Fetch the active games data by PUUID
         const response = await riotApiClient.get(`/active-games/by-summoner/${puuid}`);
         res.status(200).json(response.data);
     } catch (error) {
@@ -23,13 +23,13 @@ exports.getActiveGamesByPUUID = async (req, res) => {
     }
 };
 
-// Fetch account by Riot ID
+// Fetch featured spectator games 
 exports.getFeaturedGames = async (req, res) => {
     try {
         // Create the Riot API client with the correct base URL for Account V1
         const riotApiClient = createRiotApiClient('SPECTATOR_V5');
 
-        // Fetch the account data by PUUID
+        // Fetch the spectator games data
         const response = await riotApiClient.get(`featured-games`);
         res.status(200).json(response.data);
     } catch (error) {

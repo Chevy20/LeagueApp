@@ -5,6 +5,8 @@ function NoParamForm() {
     const options = [
         { label: 'Specator Featured Games', value: 'spectator/featured-games' },
         { label: 'Champion Rotations', value: 'platform/champion-rotations' },
+        { label: 'NA Server Status', value: 'lol-status/status' }
+
 
     ];
     const [selectedOption, setSelectedOption] = useState(options[0].value); // Default to the first option
