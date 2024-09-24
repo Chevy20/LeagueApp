@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 function LeagueQueueForm() {
     // Define the available queue in a modular way
     const queue = [
-        { label: 'Ranked Solo Queue', value: 'RANKED_SOLO_5X5' },
+        { label: 'Ranked Solo Queue', value: 'RANKED_SOLO_5x5' },
         { label: 'Ranked Flex', value: 'RANKED_FLEX_SR' }
     ];
     const tier = [
