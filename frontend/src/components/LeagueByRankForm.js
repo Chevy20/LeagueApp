@@ -6,9 +6,13 @@ function LeagueByRankForm() {
         { label: 'Ranked Flex', value: 'RANKED_FLEX_SR' }
     ];
     const tier = [
-        { label: 'Challenger', value: 'challengerleagues' },
-        { label: 'Grandmaster', value: 'grandmasterleagues' },
-        { label: 'Master', value: 'masterleagues' }
+        { label: 'Diamond', value: 'DIAMOND' },
+        { label: 'Emerald', value: 'EMERALD' },
+        { label: 'Platinum', value: 'PLATINUM' },
+        { label: 'Gold', value: 'GOLD' },
+        { label: 'Silver', value: 'SILVER' },
+        { label: 'Bronze', value: 'BRONZE' },
+        { label: 'Iron', value: 'IRON' }
     ];
     const division = [
         { label: 'I', value: 'I' },
