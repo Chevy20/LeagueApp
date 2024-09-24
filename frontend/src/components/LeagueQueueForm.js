@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+
 function LeagueQueueForm() {
     // Define the available queue in a modular way
     const queue = [
@@ -13,7 +14,7 @@ function LeagueQueueForm() {
     ];
 
     const [selectedQueue, setSelectedQueue] = useState(queue[0].value); // Default to the first option
-    const [selectedTier, setSelectedTier] = useState(queue[0].value); // Default to the first option
+    const [selectedTier, setSelectedTier] = useState(tier[0].value); // Default to the first option
     const [leagueData, setLeagueData] = useState(null);
     const [error, setError] = useState(null);
 
