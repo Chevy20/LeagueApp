@@ -9,6 +9,20 @@ LeagueApp is a comprehensive full-stack application built using the MERN stack (
 
 ## **Current Status**
 - **Back End Testing**: Focus on testing the backend services to ensure robust data handling and API interactions.
+Services Working:
+Account API Test Page
+Summoner API Test Page
+Champion API Test Page
+League API Test Page
+LOL Status Test Page
+Spectator API Test Page
+
+Services in Development:
+League EXP API Test Page
+Clash API Test Page
+Match API Test Page
+LOL Challenges API Test Page
+Champion Mastery API Test Page
 
 ## **Goals**
 - Implement core Riot Games API services.
