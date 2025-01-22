@@ -1,11 +1,11 @@
 # **TBA**  
-A Full Stack (PERN) web application utilizing the Riot Games API for League of Legends. Early Development
+A Full Stack (MERN) web application utilizing the Riot Games API for League of Legends. Early Development
 
 ## **Contributors**
 - [Matthew Cheverie](https://github.com/Chevy20)
 
 ## **Description**
-LeagueApp is a comprehensive full-stack application built using the PERN stack (PostgreSQL, Express, React, Node.js). 
+LeagueApp is a comprehensive full-stack application built using the MERN stack (MongoDB, Express, React, Node.js). 
 
 ## **Current Status**
 - **Back End Testing**: Focus on testing the backend services to ensure robust data handling and API interactions.
@@ -19,7 +19,7 @@ LeagueApp is a comprehensive full-stack application built using the PERN stack (
 ## **Tech Stack**
 - **Frontend**: React.js
 - **Backend**: Node.js, Express.js
-- **Database**: PostgreSQL (Amazon RDS)
+- **Database**: MongoDB
 - **API**: Riot Games API
 - **Deployment**: AWS EC2, Docker
 
