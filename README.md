@@ -5,7 +5,7 @@ _Current Status: Early Development_
 ---
 
 ## **Contributors**
-- Matthew Cheverie
+- [Matthew Cheverie](https://github.com/Chevy20)
 
 ---
 
