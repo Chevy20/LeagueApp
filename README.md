@@ -1,9 +1,8 @@
 # **TBA**  
-A Full Stack (PERN) web application utilizing the Riot Games API for League of Legends.
+A Full Stack (PERN) web application utilizing the Riot Games API for League of Legends. Early Development
 
 ## **Contributors**
 - [Matthew Cheverie](https://github.com/Chevy20)
-- [Victor Chang](https://github.com/junyuchang)
 
 ## **Description**
 LeagueApp is a comprehensive full-stack application built using the PERN stack (PostgreSQL, Express, React, Node.js). 
